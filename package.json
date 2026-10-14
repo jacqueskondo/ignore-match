@@ -1,6 +1,6 @@
 {
   "name": "ignore-match",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "paths filtered by gitignore-style patterns, with precedence applied",
   "type": "module",
   "main": "src/index.js",
