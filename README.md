@@ -42,3 +42,10 @@ get the right answer for a path you have not yet stat'd, pass the
 `isDirectory` option explicitly. Without it, the matcher guesses from a
 trailing slash on the path — which is wrong for paths that happen to end in
 `/` for other reasons or for bare filenames.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
